@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 
 const C = {
   deepBrown:  '#713600',
@@ -621,7 +622,7 @@ function ResultsScreen({ data, onReset, isDemo }) {
             </div>
           )}
 
-          {/* ── VERDICT ─────────────────────────────────────────────────── */}
+          {/* ── VERDICT ───────────���─────────────────────────────────────── */}
           <TiltCard className="fade-up glass-strong" style={{
             padding:'28px 28px 28px 22px',
             borderLeft:`3px solid ${verdictColor}`,
@@ -1024,6 +1025,7 @@ const handleAnalyze = async () => {
         {appState==='results' && <ResultsScreen data={data} onReset={handleReset} isDemo={isDemo}/>}
         {appState==='error'   && <ErrorScreen   onReset={handleReset}/>}
       </div>
+      <Analytics />
     </>
   )
 }
