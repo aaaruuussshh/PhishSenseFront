@@ -1065,7 +1065,7 @@ export default function App() {
 
   const handleReset = () => {
     clearInterval(timerRef.current)
-    setAppState('idle'); setUrl(''); setData(null); setLoadingStep(0); setIsDemo(false)
+    setAppState('idle'); setUrl(''); setScanUrl(''); setData(null); setLoadingStep(0); setIsDemo(false)
   }
 
   useEffect(() => () => clearInterval(timerRef.current), [])
